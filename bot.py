@@ -23,8 +23,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text(
             "✅ Спасибо! Вы подписаны на канал."
         )
-        await update.message.reply_text("👉 Ваш бонус: [Гайд Как перестать жрать от Фитнес-абьюз Мирный] ({https://drive.google.com/file/d/1zDOfBS-DLpoyZQPw1Oi854x4v_8sTZVx/preview}")
-        )
+        await update.message.reply_text("👉 Ваш бонус: [Гайд Как перестать жрать от Фитнес-абьюз Мирный] ({https://drive.google.com/file/d/1zDOfBS-DLpoyZQPw1Oi854x4v_8sTZVx/preview}"))
     else:
         await update.message.reply_text(
             f"❌ Чтобы получить сообщение, подпишитесь на канал {CHANNEL_USERNAME} и нажмите /start снова."
@@ -37,4 +36,5 @@ if __name__ == "__main__":
     print("Бот запущен...")
 
     app.run_polling()
+
 
