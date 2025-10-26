@@ -2,7 +2,8 @@ from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 
 # 🔑 Токен бота, который ты получил у BotFather
-BOT_TOKEN = "8264390202:AAFu29-XTv3unSwenhNnjov1Vd3O5-Kn_1g"
+import os
+BOT_TOKEN = os.getenv("8264390202:AAFu29-XTv3unSwenhNnjov1Vd3O5-Kn_1g")
 
 # 🔗 Имя канала (пример: @my_channel)
 CHANNEL_USERNAME = "@zhizn_z"
@@ -33,4 +34,5 @@ if __name__ == "__main__":
     app = ApplicationBuilder().token(BOT_TOKEN).build()
     app.add_handler(CommandHandler("start", start))
     print("Бот запущен...")
+
     app.run_polling()
